@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p id="thapa"> Thapa </p>
+    <p class="welcome"> Technical </p>
+    <p class="welcome"> Technical1 </p>
+    <p class="welcome"> Technical2 </p>
+
+    <ul><li>like</li>
+        <li>share</li>
+        <li>subscribe</li></ul>
+
+    <!-- access childern of a body -->
+    <script>
+        var child = document.body.children;
+        console.log(child)
+    </script>
+
+    <!-- add a new child in abody -->
+    <script>
+        var para = document.createElement('p');
+        var textnode = document.createTextNode("This is a new para");
+        para.appendChild(textnode);
+        console.log(para);
+        document.body.appendChild(para);
+
+        //access firstchild and lastchild
+        var list = document.querySelector('ul')
+        console.log(list)
+        console.log(list.firstChild)
+        console.log(list.lastChild)
+        var firstsiblings = thapa.nextElementSibling.nextElementSibling;
+        console.log(firstsiblings)
+        console.log(list.parentNode)
+    </script>
+
+</body>
+</html>

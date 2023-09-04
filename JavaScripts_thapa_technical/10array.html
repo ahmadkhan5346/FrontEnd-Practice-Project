@@ -1,0 +1,33 @@
+<script>
+
+    var friends = ['Sarfraz', 'Sadique', 'Junaid'];
+    document.write(friends+"<br>");
+
+    var friends = new Array(
+        'Ashraf', 'Minhaj', 'Anam'
+    );
+    document.write(friends+"<br>");
+    document.write("<br>");
+    document.write("Array Property and Method :<br>")
+
+    var friends = ['Sarfraz', 'Sadique', 'Junaid', 'Ashraf', 'Minhaj', 'Anam'];
+    var length = friends.length
+    document.write(length+"<br>")
+    friends.sort()
+    document.write(friends+"<br>")
+
+    var array = ['Sarfraz', 'Sadique', 'Junaid', 'Ashraf', 'Minhaj', 'Anam'];
+    //array.push('Tarannum');
+    //array.pop();
+    //array.shift();
+    //array.unshift("Abdulla");
+    //document.write(array)
+
+    var check = Array.isArray(array); document.write("<br>")
+    document.write(check+"<br>")
+
+    document.write('Index:'+array.indexOf("Ashraf"))
+
+
+
+</script>
