@@ -1,0 +1,63 @@
+<div class="container mt-3">
+    <div class="row">
+        <div class="col">
+            <p class="h3 text-danger fw-bold">NG Contacts
+                <a class="btn btn-danger btn-sm" routerLink="/contacts/add"><li class="fa fa-plus-circle"></li> New</a>
+            </p>
+            <p class="fst-italic">
+                del is a keyword in Python that is used to delete a reference to an object.
+                When you use del to remove a reference to an object, it does not necessarily immediately destroy the object itself. Instead, it decrements the reference count of the object.
+            </p>
+            <form action="">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Search User">
+                            </div>
+                            <div class="col">
+                                <input type="submit" class="btn btn-outline-dark" value="Search">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Cards -->
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card list-group-item-danger">
+                <div class="card-body">
+                    <div class="row align-items-center">
+                        <div class="col-sm-4">
+                            <img src="https://assets.stickpng.com/images/585e4bcdcb11b227491c3396.png" alt="" class="contact-img">
+                        </div>
+                        <div class="col-sm-7">
+                            <ul class="list-group">
+                                <li class="list-group-item">Name : <span class="fw-bold">Name</span></li>
+                                <li class="list-group-item">Email : <span class="fw-bold">Email</span></li>
+                                <li class="list-group-item">Mobile : <span class="fw-bold">Mobile</span></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-1 d-flex flex-column align-items-center justify-content-center">
+                            <a class="btn btn-warning my-1" routerLink="/contacts/view/:contactId">
+                                <li class="fa fa-eye"></li>
+                            </a>
+                            <a class="btn btn-primary my-1" routerLink="/contacts/edit/:contactId">
+                                <li class="fa fa-pen"></li>
+                            </a>
+                            <button class="btn btn-danger my-1">
+                                <li class="fa fa-trash-alt"></li>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
