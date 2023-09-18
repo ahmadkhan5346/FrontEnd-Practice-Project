@@ -1,0 +1,79 @@
+{
+    "contacts":[
+        {
+            "id": "101",
+            "name": "Sarfraz Khan",
+            "company": "YouTube",
+            "email": "sarfraz@gmail.com",
+            "title": "Youtuber",
+            "mobile": "9702225346",
+            "photo": "https://assets.stickpng.com/images/585e4bcdcb11b227491c3396.png",
+            "groupI": "3"
+        },
+
+        {
+            "id": "102",
+            "name": "Juned Chaudhry",
+            "company": "Friend",
+            "email": "juned@gmail.com",
+            "title": "freelancer",
+            "mobile": "9702225346",
+            "photo": "",
+            "groupI": "2"
+        },
+
+        {
+            "id": "103",
+            "name": "Sadique Ali",
+            "company": "Service",
+            "email": "sadique@gmail.com",
+            "title": "Electician",
+            "mobile": "9702225346",
+            "photo": "",
+            "groupI": "4"
+        },
+
+        {
+            "id": "104",
+            "name": "Ashraf Malik",
+            "company": "Hcl Technologies",
+            "email": "ashraf@gmail.com",
+            "title": "Software Engineer",
+            "mobile": "9702225346",
+            "photo": "",
+            "groupI": "1"
+        }
+    ],
+
+    "groups": [
+        {
+            "id": "1",
+            "name": "Colleague"
+        },
+
+        {
+            "id": "2",
+            "name": "Friend"
+        },
+
+        {
+            "id": "3",
+            "name": "Family"
+        },
+
+        {
+            "id": "4",
+            "name": "Service"
+        },
+
+        {
+            "id": "5",
+            "name": "Community"
+        },
+
+        {
+            "id": "6",
+            "name": "Social"
+        }
+    ]
+}

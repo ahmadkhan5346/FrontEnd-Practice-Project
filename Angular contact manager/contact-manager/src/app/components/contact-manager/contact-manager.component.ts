@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { IContact } from 'src/app/models/IContact';
+import { ContactService } from 'src/app/services/contact.service';
 
 @Component({
   selector: 'app-contact-manager',
@@ -6,10 +8,26 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contact-manager.component.css']
 })
 export class ContactManagerComponent implements OnInit {
+  public loading:boolean = false;
+  public contacts:IContact[] = [];
+  public errorMessage:string | null = null;
 
-  constructor() { }
+  constructor(private contactService : ContactService) { 
+
+  }
 
   ngOnInit(): void {
+    this.loading = true;
+    this.contactService.getAllcontacts().subscribe((data :IContact[]) => {
+      this.contacts = data;
+      console.log("Hello")
+      console.log(data)
+      this.loading = false;
+    },(error) => {
+      this.errorMessage = error;
+      this.loading = false;
+      console.log("Error")
+    });
   }
 
 }
