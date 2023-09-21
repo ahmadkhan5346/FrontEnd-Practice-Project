@@ -23,25 +23,25 @@ export class ContactService {
 
   //GET Single Contact
   public getContact(contactId: string): Observable<IContact>{
-    let dataUrl: string = `${this.serverUrl}/contact/${contactId}`;
+    let dataUrl: string = `${this.serverUrl}/contacts/${contactId}`;
     return this.httpClient.get<IContact>(dataUrl).pipe(catchError(this.handleError));
   }
 
   //Create a Contact
   public createContact(contact : IContact):Observable<IContact>{
-    let dataUrl: string = `${this.serverUrl}/contact`;
+    let dataUrl: string = `${this.serverUrl}/contacts`;
     return this.httpClient.post<IContact>(dataUrl, contact).pipe(catchError(this.handleError));
   }
 
   //Update a Contact
   public updateContact(contact : IContact, contactId: string):Observable<IContact>{
-    let dataUrl: string = `${this.serverUrl}/contact/${contactId}`;
+    let dataUrl: string = `${this.serverUrl}/contacts/${contactId}`;
     return this.httpClient.put<IContact>(dataUrl, contact).pipe(catchError(this.handleError));
   }
 
   //Delete a Contact
   public deleteContact(contactId: string):Observable<{}>{
-    let dataUrl: string = `${this.serverUrl}/contact/${contactId}`;
+    let dataUrl: string = `${this.serverUrl}/contacts/${contactId}`;
     return this.httpClient.delete<{}>(dataUrl).pipe(catchError(this.handleError));
   }
 

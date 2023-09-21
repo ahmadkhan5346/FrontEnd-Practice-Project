@@ -17,17 +17,30 @@ export class ContactManagerComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.getAllContactsFromServer();
+  }
+
+
+  public getAllContactsFromServer(){
     this.loading = true;
     this.contactService.getAllcontacts().subscribe((data :IContact[]) => {
       this.contacts = data;
-      console.log("Hello")
-      console.log(data)
       this.loading = false;
     },(error) => {
       this.errorMessage = error;
       this.loading = false;
-      console.log("Error")
     });
+  }
+
+
+  public clickDeleteContact(contactId: string | undefined){
+    if (contactId){
+      this.contactService.deleteContact(contactId).subscribe((data) => {
+        this.getAllContactsFromServer();
+      }, (error) => {
+        this.errorMessage = error;
+      });
+    }
   }
 
 }
